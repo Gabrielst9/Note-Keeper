@@ -1,0 +1,48 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">
+        <mat-icon matListItemIcon>home</mat-icon>
+        DashBoard
+      </a>
+      <a mat-list-item href="#">
+        <mat-icon matListItemIcon>bookmarks</mat-icon>
+        Categorias</a>
+      <a mat-list-item href="#">
+        <mat-icon matListItemIcon>collections_bookmark</mat-icon>
+        Notas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      @if (isHandset$ | async) {
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      }
+      <span class="d-flex align-items-center gap-2">
+        <mat-icon matListItemIcon>collections_bookmark</mat-icon>
+        NoteKeeper</span>
+    </mat-toolbar>
+
+    <main class="container-fluid my-4">
+      <h1>Ola mundo</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt veritatis obcaecati! Eos sit nulla molestiae,
+        repudiandae facere tenetur distinctio est recusandae molestias consequuntur nobis voluptas cupiditate, inventore aperiam rem!
+      </p>
+    </main>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
