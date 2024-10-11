@@ -1,0 +1,28 @@
+.notificacao-sucesso
+{
+  --mdc-snackbar-container-color: #000;
+
+  --mdc-snackbar-supporting-text-color: white;
+
+  --mat-snack-bar-button-color: white;
+}
+
+.notificacao-aviso
+{
+
+  --mdc-snackbar-container-color: #f0d800;
+
+  --mdc-snackbar-supporting-text-color: rgb(2, 1, 1);
+
+  --mat-snack-bar-button-color: rgb(0, 0, 0);
+}
+
+.notificacao-erro
+{
+
+  --mdc-snackbar-container-color: #ff0505;
+
+  --mdc-snackbar-supporting-text-color: white;
+
+  --mat-snack-bar-button-color: white;
+}

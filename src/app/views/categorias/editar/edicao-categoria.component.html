@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <h2 class="fs-2">Edição de Categoria</h2>
+  <hr />
+  <div class="row g-2">
+    <form
+      [formGroup]="categoriaForm"
+      (ngSubmit)="editar()"
+      class="col-lg-8 col-xl-5"
+    >
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Título da Categoria</mat-label>
+        <input matInput formControlName="titulo" placeholder="Ex: Lazer" />
+        <mat-icon matSuffix>subtitles</mat-icon>
+
+
+        <mat-error *ngIf="titulo?.invalid && titulo?.errors!['required']" >O título é obrigatório!</mat-error>
+
+        <mat-error *ngIf="titulo?.invalid && titulo?.errors!['minlength']" >O título precisa conter no mínino 3 caracteres!</mat-error>
+
+      </mat-form-field>
+
+      <div class="row justify-content-center justify-content-md-end g-2 gap-1">
+        <button type="submit" mat-flat-button class="col-sm-3 col-md-4">
+          <mat-icon matIconPrefix>check</mat-icon>
+          Confirmar
+        </button>
+
+        <a
+          mat-stroked-button
+          type="button"
+          class="col-sm-3 col-md-4"
+          routerLink="/categorias"
+        >
+          <mat-icon matIconPrefix>keyboard_return</mat-icon>
+          Voltar
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
