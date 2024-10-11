@@ -21,5 +21,8 @@ export const routes: Routes = [
     ]
   },
 
-  { path: 'notas', children: notasRoutes },
+  {
+    path: 'notas',
+    children: notasRoutes
+  },
 ];
