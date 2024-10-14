@@ -126,6 +126,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+
+          "options": {
+            "baseHref": "https://gabrielst9.github.io/Note-Keeper/",
+            "repo": "https://github.com/Gabrielst9/Note-Keeper.git"
+          }
         }
       }
     }
